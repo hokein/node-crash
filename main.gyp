@@ -14,13 +14,14 @@
         'main.cc'
       ],
       'dependencies': [
-        'third_party/node/deps/v8/src/v8.gyp:v8',
-        'third_party/node/deps/v8/src/v8.gyp:v8_libplatform',
         'third_party/node/node.gyp:node',
       ],
       'defines': [
         'NODE_WANT_INTERNALS=1',
         'NODE_SHARED_MODE',
+        'HAVE_INSPECTOR=0',
+        'NODE_USE_V8_PLATFORM=1',
+        'HAVE_OPENSSL=1',
       ],
       'xcode_settings': {
         'GCC_VERSION': 'com.apple.compilers.llvm.clang.1_0',
